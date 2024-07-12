@@ -1,14 +1,25 @@
+import styles from './Description.module.sass';
+import Image from 'next/image';
+
 export const Description = () => {
   return (
-    <section>
-      <img src='/images/description.jpeg' alt='products marketplace' />
-      <h2>Description</h2>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum eaque
-        quos distinctio nobis. Aperiam voluptatibus qui aliquam ducimus ipsum
-        ratione possimus vel fuga minus atque! Voluptatem quidem expedita
-        accusamus voluptatibus.
-      </p>
+    <section className={styles.Description}>
+      <Image
+        src='/images/description.jpeg'
+        alt='products marketplace'
+        width={500}
+        height={300}
+        priority={false}
+        quality={100}
+      />
+      <div className={styles.Description__text}>
+        <h2>Bring the future today</h2>
+        <p>
+          Future World: Your Gateway to Tomorrow's Tech! Dive into a world of
+          cutting-edge gadgets and gear. Stay ahead of the curve and redefine
+          your digital lifestyle with us.
+        </p>
+      </div>
     </section>
   );
 };
